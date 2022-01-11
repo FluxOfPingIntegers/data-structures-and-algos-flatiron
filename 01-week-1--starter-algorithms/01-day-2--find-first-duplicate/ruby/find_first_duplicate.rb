@@ -23,4 +23,15 @@ if __FILE__ == $PROGRAM_NAME
 end
 
 # Please add your pseudocode to this file
+=begin
+  -create a map of the array containing the indexes of all the matching elements that occur at the next index
+  -create another array that contains all the elements of this map that passed initial test.
+  -make sure this new array has a length greater than 0, return the original array at the first index of this new array
+=end
 # And a written explanation of your solution
+=begin
+  I had to create an array of indexes in which a duplicate element is found in the original array that corresponds with the following
+  index of the original array.  I then had to select out of this list to exclude false values (elements that had no duplicate or
+  did not dupicate in sequence).  I then had to return the value of the original array at this arrays first index.  If there wasnt
+  one, I needed to return -1. 
+=end
