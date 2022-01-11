@@ -1,5 +1,13 @@
 def find_first_duplicate(arr)
   # type your code in here
+  matches = arr.map.with_index do |value, index|
+    if value == arr[index + 1]
+      index
+    end
+  end
+  match_index = matches.select {|element| !!element}
+  (match_index.length > 0 ? arr[match_index[0]] : -1)
+
 end
 
 if __FILE__ == $PROGRAM_NAME
