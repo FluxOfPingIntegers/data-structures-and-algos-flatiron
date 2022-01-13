@@ -5,7 +5,7 @@ function fibonacci(num) {
     1: 1
   }
 
-  
+
 
   /*
   if (num == 0 || num == 1) {return num}
@@ -51,4 +51,10 @@ if (require.main === module) {
 module.exports = fibonacci;
 
 // Please add your pseudocode to this file
+/*
+  -create hash with keys/values representing first two numbers of fibonacci series
+  -create a loop with a counter beginning at 2 set a variable on each iteration to one less than this counter
+  -create a new value inside the loop that sums hash[counter -2] to hash[counter - 1] and sets it to hash[counter]
+  -if counter == num return hash[num] else increment counter 
+*/
 // And a written explanation of your solution
