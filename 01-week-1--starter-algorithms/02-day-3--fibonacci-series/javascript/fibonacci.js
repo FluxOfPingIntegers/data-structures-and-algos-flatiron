@@ -1,16 +1,30 @@
 function fibonacci(num) {
   // type your code here
   let obj = {
-    0: 0,
-    1: 1
+    "0": 0,
+    "1": 1
   }
-  let b = 1
-  while (b != num + 2 || obj[``]) {
-    let a = b - 1
-    let next = b + 1
-    obj[`${next}`] = obj[`${a}`] + obj[`${b}`]
-    
+
+  let i = 1
+
+  const incrementObj = (index) => {
+    const previousIndex = (index - 1)
+    const nextIndex = (index + 1)
+    obj[`${nextIndex}`] = obj[`${previousIndex}`] + obj[`${index}`]
+    return nextIndex
   }
+
+  const populateObj = () => {
+      i = incrementObj(i)
+      if (!!obj[`${num}`] || i == num + 3) {
+        return obj[`${num}`]
+      } else {
+        return populateObj()
+      }
+  }
+
+  return populateObj()
+
 
 
 
