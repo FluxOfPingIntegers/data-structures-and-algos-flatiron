@@ -24,33 +24,6 @@ function fibonacci(num) {
   }
 
   return populateObj()
-
-
-
-
-  /*
-  if (num == 0 || num == 1) {return num}
-  if (num == 2) {return 1}
-  let numberSeries = [0, 1]
-
-  const incrementSeries = () => {
-    const nextElement = numberSeries[numberSeries.length - 1] + numberSeries[numberSeries.length - 2]
-    numberSeries.push(nextElement) 
-  }
-
-  const populateNumberSeries = () => {
-    let numberOfIncrements = num - 2
-    for (let i = numberOfIncrements; i != 0; i--) {
-      incrementSeries()
-      if (i == num)
-    }
-  }
-  const reduceArray = (arr = populateNumberSeries()) => {
-    const reducer = (previousValue, currentValue) => previousValue + currentValue;
-    return arr.reduce(reducer) + 1
-  }
-  return reduceArray(populateNumberSeries())
-  */
 }
 
 if (require.main === module) {
@@ -74,8 +47,15 @@ module.exports = fibonacci;
 // Please add your pseudocode to this file
 /*
   -create hash with keys/values representing first two numbers of fibonacci series
-  -create a loop with a counter beginning at 2 set a variable on each iteration to one less than this counter
-  -create a new value inside the loop that sums hash[counter -2] to hash[counter - 1] and sets it to hash[counter]
-  -if counter == num return hash[num] else increment counter 
+  -create an incremental function which adds keys to this hash
+  -create another function which calls the incremental one and checks to see if the hash has the desired key yet
+  -if the hash has the desired key return the desired key, else the function calls itself again.
 */
 // And a written explanation of your solution
+/*
+  -I decided creating a hash would make for a faster solve than iterating constantly through an array. so first thing is I
+  created a hash with keys for the first two index values for the fibonacci series.  I then made a function that incremented
+  a variable representing the current and used this to add keys and values to this hash.  I then made another function which
+  was recursive and would call this incrementing function, see if the hash had the desired key yet, if so return the desired
+  key, if not call itself again.  I returned this function at the end of the  
+*/
