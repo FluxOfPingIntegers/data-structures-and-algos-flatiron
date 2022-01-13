@@ -4,6 +4,13 @@ function fibonacci(num) {
     0: 0,
     1: 1
   }
+  let b = 1
+  while (b != num + 2 || obj[``]) {
+    let a = b - 1
+    let next = b + 1
+    obj[`${next}`] = obj[`${a}`] + obj[`${b}`]
+    
+  }
 
 
 
