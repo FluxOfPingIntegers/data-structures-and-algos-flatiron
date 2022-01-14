@@ -32,4 +32,18 @@ if __FILE__ == $PROGRAM_NAME
 end
 
 # Please add your pseudocode to this file
+=begin
+  -create hash with first two key/values of fibonacci array, with they key representing the index and value representing the element
+  -create an array with the first two elements being the first two indexes of the fibonacci array
+  -add to this array through iteration an element for each index of the fibonacci array until the number of indexes are respesented
+  -iterate through this array adding each element as a key for the hash except for the first 2, then add the previous two hash
+    values to get the value for this newly added hash key.
+  -return the hash at the key for which the provided number argument was for.
+=end
 # And a written explanation of your solution
+=begin
+  Using an array for this solve would be costly having to lookup the index for each element in order to compute the next one.
+  I knew that the lookup time could be saved using a hash but still felt the need to create an array just to add the keys for
+  the hash and conveniently execute a block which the key/value pairs I needed were added.  Then I simply returned the hash at
+  the key value of the index the problem provided because at that point it was there.
+=end
