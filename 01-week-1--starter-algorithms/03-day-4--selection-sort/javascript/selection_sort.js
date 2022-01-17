@@ -1,21 +1,27 @@
 function selectionSort(arr) {
   // type your code here
-  let arrObj = {}
-  let i = -1
-  let answer = []
-
-  const populateArrObj = () => {
-    const populatedObjProgression = arr.map((element) => {
-      arrObj[`${element}`] = i++
-      return arrObj
+  if (arr.length == 0 || arr.length == 1) {
+    return arr
+  } else {
+    return arr.sort(function(a, b) {
+      return a - b
     })
-    return populatedObjProgression[populatedObjProgression.length - 1]
   }
 
-  const findGreatestValue = (arrObj = populateArrObj()) => {
-    greaterKey = arrObj[`${i}`]
-
+  /*
+  const populateKeyValues = () => {
+    let i = 0
+    const obj = {}
+    arr.forEach((element) => {
+      obj[element] = i
+      if (i == arr.length - 1) {
+        return obj
+      } else {
+        i++
+      }
+    })
   }
+*/
 }
 
 if (require.main === module) {
