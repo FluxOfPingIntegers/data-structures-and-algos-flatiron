@@ -1,67 +1,19 @@
 function selectionSort(arr) {
-  // type your code here
-  /*
+  const answerArr = [];
   if (arr.length == 0 || arr.length == 1) {
     return arr
   } else {
-    return arr.sort(function(a, b) {
-      return a - b
-    })
-  }
-  */
-
-  const populateKeyValues = () => {
-    let i = 0
-    const obj = {}
-    arr.forEach((element) => {
-      obj[element] = i
-      if (i == arr.length - 1) {
-        return sortKeyValues(obj)
-      } else {
-        i++
-      }
-    })
-  }
-
-  const sortKeyValues = (obj) => {
-    let i = 1
-    arr.forEach((element) => {
-      const next = (!!arr[i] ? arr[i] : false )
-      if (next) {
-        if (element < next && obj[element] > obj[next]) {
-            let lesserIndex = obj[next]
-            let greaterIndex = obj[element]
-            obj[element] = lesserIndex
-            obj[next] = greaterIndex
-            i++
-        }
-      } else {
-        return objToIndexObj(obj)
-      }
-    })
-  }
-
-  const objToIndexObj = (obj) => {
-    let indexObj = {}
-    arr.forEach(value => {
-      indexObj[obj[value]] = value
-      if (obj[value] == arr.length - 1) {
-        return indexObjToArray(indexObj)
-      }
-    })
-  }
-
-  const indexObjToArray = (indexObj) => {
-    let answerArr = []
-    for (let i = 0; i == arr.length; i++) {
-      answerArr.push(indexObj[i])
-      if (i == arr.length - 1) {
+    for (let i = arr.length; i > -1; i--) {
+      const min = Math.min(...arr)
+      const i = arr.indexOf(min);
+  
+      answerArr.push(min);
+      arr.splice(i, 1);
+      if (arr.length == 0) {
         return answerArr
       }
     }
   }
-
-  return populateKeyValues()
 }
 
 if (require.main === module) {
