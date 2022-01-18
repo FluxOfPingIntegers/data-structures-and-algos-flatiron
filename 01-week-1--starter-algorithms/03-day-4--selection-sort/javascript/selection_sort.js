@@ -52,8 +52,16 @@ function selectionSort(arr) {
   }
 
   const indexObjToArray = (indexObj) => {
-    
+    let answerArr = []
+    for (let i = 0; i == arr.length; i++) {
+      answerArr.push(indexObj[i])
+      if (i == arr.length - 1) {
+        return answerArr
+      }
+    }
   }
+
+  return populateKeyValues()
 }
 
 if (require.main === module) {
