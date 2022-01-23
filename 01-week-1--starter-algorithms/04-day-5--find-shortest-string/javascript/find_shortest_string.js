@@ -30,12 +30,12 @@ module.exports = findShortestString;
 // Please add your pseudocode to this file
 /*
   -create variable *answer equal to an empty string
-  -iterate through arr, test element string length, if element.length > answer, answer = element
+  -iterate through arr, test element string length, if element.length < answer.length, answer = element
    if element === arr.last return answer
 */
 // And a written explanation of your solution
 /*
-  I am creating a blank string and testing its length against each element in the argument array.  If an elements length
-  is greater than the blank string variable I am assigning the blank steam variable to that element.  On the last iteration I
-  am returning the variable that was originally blank.
+  I am creating a variable *answer set to the first element in arr or a blank string and testing its length against each
+  element in the argument array.  If an elements length is less than answer I am assigning the value of answer
+  to that element.  If the current element in the iteration is the last one of the array, I'm returning answer
 */
