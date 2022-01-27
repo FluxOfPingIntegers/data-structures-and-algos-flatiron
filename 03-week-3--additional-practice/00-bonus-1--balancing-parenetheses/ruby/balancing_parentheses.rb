@@ -39,4 +39,17 @@ if __FILE__ == $PROGRAM_NAME
 end
 
 # Please add your pseudocode to this file
+=begin
+  -split argument string into an array
+  -iterate through the array, count the number of chars equal to '(' and save them to a variable, same as the chars equal to ')'
+  -find which one of these two variables is greater and save it.  Find which one of these two variables is least and save it
+  -if the opening char in the array is ')' and the last char is not equal to it, return greater - lesser + 2
+  -else return greater - lesser
+=end
 # And a written explanation of your solution
+=begin
+  I wanted to create an array using the original string arument and count the arrays elements that are ')' and also count
+  the ones equal to '('.  I wanted to determine which one of these counts was greater and lesser and save them to separate
+  variables.  Then depending on the pattern of the array return either the difference of greater and lesser or the difference
+  of greater and lesser + 2.  This would be dictated by if the opening character was ')' and the closing was was '('.
+=end
