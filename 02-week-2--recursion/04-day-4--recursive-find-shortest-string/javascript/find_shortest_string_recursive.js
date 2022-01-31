@@ -9,7 +9,6 @@ function findShortestStringRecursive(arr) {
     const areLess = element => element.length < firstElement.length
     return (arr.some(areLess) ? findShortestStringRecursive(arr) : firstElement )
   }
-
 }
 
 if (require.main === module) {
