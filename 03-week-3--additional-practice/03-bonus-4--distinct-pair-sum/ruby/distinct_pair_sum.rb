@@ -17,4 +17,10 @@ if __FILE__ == $PROGRAM_NAME
 end
 
 # Please add your pseudocode to this file
+=begin
+
+=end
 # And a written explanation of your solution
+=begin
+
+=end
