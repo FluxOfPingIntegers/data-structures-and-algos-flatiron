@@ -16,4 +16,7 @@ if (require.main === module) {
 module.exports = distinctPairSum;
 
 // Please add your pseudocode to this file
+/*
+
+*/
 // And a written explanation of your solution
