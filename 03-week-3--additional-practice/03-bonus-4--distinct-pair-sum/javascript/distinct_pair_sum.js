@@ -39,6 +39,9 @@ module.exports = distinctPairSum;
 
 // Please add your pseudocode to this file
 /*
-
+  -map all of arrs values to hash so that each of them are unique
+  -iterate through arr, subtract each value from k and test to see if hash has the key, if it does set both the element key and
+   value key to false.
+  -once iteration is through return mapped array
 */
 // And a written explanation of your solution
