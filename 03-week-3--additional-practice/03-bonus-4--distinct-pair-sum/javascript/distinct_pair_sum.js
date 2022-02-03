@@ -1,5 +1,27 @@
 function distinctPairSum(arr, k) {
   // type your code here
+  let obj= {}
+  const populateArrObj = () => {arr.forEach((element, index) => {
+    obj[`${element}`] = element
+    if (index === arr.length - 1) {
+      console.log(obj)
+      return obj
+    }
+    })
+  }
+
+  const distinctPair = (arrObj = populateArrObj()) => {
+    return arr.map((element) => {
+      const value = k - element
+      if (!!arrObj[`${element}`] && !!arrObj[`${value}`]) {
+        arrObj[`${element}`] = false
+        arrObj[`${value}`] = false
+        return [element, value]
+      }
+    })
+  }
+
+  return distinctPair()
 }
 
 if (require.main === module) {
