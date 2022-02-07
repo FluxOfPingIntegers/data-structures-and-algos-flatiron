@@ -1,5 +1,18 @@
 def consecutive_substrings(string)
   # type your code in here
+  sub_strings = []
+  char_list = string.split('')
+  char_list.each_with_index do |char, index|
+    sub_strings << char
+    letter = char
+
+    string[index + 1..-1].split('').each_with_index do |next_letter|
+      letter += next_letter
+      sub_strings << letter
+    end
+  end
+
+  sub_strings
 end
 
 if __FILE__ == $PROGRAM_NAME
