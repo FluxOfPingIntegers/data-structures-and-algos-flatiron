@@ -44,7 +44,8 @@ class Stack {
   // return -1 if item not in stack, otherwise integer representing 
   // how far it is from the top
   search(target) {
-    return !!this.stack.find(element => element === target) ? (this.stack.length - 1) - this.stack.findIndex(element => element === target) : -1
+    const isPresent = (element) => {return element === target}
+    return !!this.stack.find(isPresent) ? (this.stack.length - 1) - this.stack.findIndex(isPresent) : -1
   }
 
   // print contents of stack: do not return the stack itself!
