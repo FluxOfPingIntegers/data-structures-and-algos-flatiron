@@ -24,12 +24,12 @@ class Queue {
 
   // return true if queue is empty, otherwise false
   isEmpty() {
-
+    this.queue.length === 0
   }
 
   // return true if queue is full, otherwise false
   isFull() {
-
+    this.queue === this.limit
   }
 
   // return number of items in queue
